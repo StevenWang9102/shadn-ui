@@ -40,6 +40,8 @@ export default function IndexPage() {
           </Link>
         </PageActions>
       </PageHeader>
+      
+      @ExamplesNav
       <ExamplesNav className="[&>a:first-child]:text-primary" />
       <section className="overflow-hidden rounded-lg border bg-background shadow-md md:hidden md:shadow-xl">
         <Image

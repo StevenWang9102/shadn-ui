@@ -13,6 +13,7 @@ export default function MailPage() {
 
   return (
     <>
+      @MailPage
       <div className="md:hidden">
         <Image
           src="/examples/mail-dark.png"

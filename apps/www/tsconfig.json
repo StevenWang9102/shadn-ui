@@ -32,6 +32,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".contentlayer/generated"
-  ],
+, "app/(app)/examples/mail/components/account-balancer-test.js"  ],
   "exclude": ["node_modules", "./scripts/build-registry.mts"]
 }

@@ -21,6 +21,7 @@ interface NavProps {
   }[]
 }
 
+// 其实这里就是所谓的复用组件
 export function Nav({ links, isCollapsed }: NavProps) {
   return (
     <div
@@ -30,6 +31,7 @@ export function Nav({ links, isCollapsed }: NavProps) {
       <nav className="grid gap-1 px-2 group-[[data-collapsed=true]]:justify-center group-[[data-collapsed=true]]:px-2">
         {links.map((link, index) =>
           isCollapsed ? (
+            // 如果导航栏是折叠状态，显示带有图标和工具提示的链接
             <Tooltip key={index} delayDuration={0}>
               <TooltipTrigger asChild>
                 <Link
@@ -55,6 +57,7 @@ export function Nav({ links, isCollapsed }: NavProps) {
               </TooltipContent>
             </Tooltip>
           ) : (
+            // 如果导航栏是展开状态，显示带有图标和标题的链接
             <Link
               key={index}
               href="#"
@@ -63,8 +66,7 @@ export function Nav({ links, isCollapsed }: NavProps) {
                 link.variant === "default" &&
                   "dark:bg-muted dark:text-white dark:hover:bg-muted dark:hover:text-white",
                 "justify-start"
-              )}
-            >
+              )}>
               <link.icon className="mr-2 h-4 w-4" />
               {link.title}
               {link.label && (

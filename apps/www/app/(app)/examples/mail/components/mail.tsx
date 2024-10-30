@@ -61,6 +61,7 @@ export function Mail({
 
   return (
     <TooltipProvider delayDuration={0}>
+      @Mail 主页
       <ResizablePanelGroup
         direction="horizontal"
         onLayout={(sizes: number[]) => {
@@ -93,6 +94,7 @@ export function Mail({
               isCollapsed ? "h-[52px]" : "px-2"
             )}
           >
+            @AccountSwitcher
             <AccountSwitcher isCollapsed={isCollapsed} accounts={accounts} />
           </div>
           <Separator />
